@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Card from './components/Card';
-import katieImg from './assets/katie.jpg';
 import data from './data';
 function App() {
   console.log('data', data);
