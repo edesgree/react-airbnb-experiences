@@ -9,17 +9,7 @@ import data from './data';
 function App() {
   console.log('data', data);
   const cardElements = data.map((card) => {
-    return (
-      <Card
-        key={card.id}
-        img={card.coverImg}
-        rating={card.stats.rating}
-        reviewCount={card.stats.reviewCount}
-        location={card.location}
-        title={card.title}
-        price={card.price}
-      />
-    );
+    return <Card key={card.id} card={card} />;
   });
   return (
     <div className="App">
