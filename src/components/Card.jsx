@@ -1,19 +1,19 @@
-import Swim from '../assets/swim.jpg';
-export default function Card() {
+export default function Card(props) {
+  console.log('props', props);
   return (
     <div className="card">
       <figure>
-        <img src={Swim} alt="life lesson" />
-        <figcaption>SOLD OUT</figcaption>
+        <img src={`images/${props.img}`} alt="life lesson" />
+        {props.isSoldOut && <figcaption>SOLD OUT</figcaption>}
       </figure>
       <div className="exp-rating">
-        <span className="exp-rating--grade">5.0 </span>
-        <span className="exp-rating--numbers">(6)</span>
-        <span className="exp-rating--location">USA</span>
+        <span className="exp-rating--grade">{props.rating} </span>
+        <span className="exp-rating--numbers">({props.reviewCount})</span>
+        <span className="exp-rating--location">{props.country}</span>
       </div>
-      <div className="exp-desc">Life Lessons with Katie Zaferes</div>
+      <div className="exp-desc">{props.title}</div>
       <div className="exp-price">
-        <strong>From $136</strong>/ person
+        <strong>From ${props.price}</strong>/ person
       </div>
     </div>
   );

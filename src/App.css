@@ -35,11 +35,20 @@ section.hero img {
   max-width: 400px;
   align-self: center;
 }
-
+section.cards-list {
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
 .card {
   max-width: 175px;
   font-size: 12px;
   line-height: 1.8em;
+  flex: 0 0 auto; /* ADD */
+  display: flex; /* ADD */
+  flex-direction: column; /* ADD */
 }
 .card figure {
   position: relative;
