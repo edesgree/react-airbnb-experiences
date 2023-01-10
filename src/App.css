@@ -1,16 +1,19 @@
 :root {
   --airbnb-color: #ff5a5f;
+  --dark-grey: #222;
+  --light-grey: #918e9b;
 }
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .container {
+  background-color: white;
   width: 550px;
+  border-radius: 10px;
 }
 
 header {
@@ -20,4 +23,63 @@ header {
 }
 header .logo {
   display: block;
+}
+section.hero {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+section.hero img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  align-self: center;
+}
+
+.card {
+  max-width: 175px;
+  font-size: 12px;
+  line-height: 1.8em;
+}
+.card figure {
+  position: relative;
+  margin: 0;
+}
+.card figure img {
+  width: 100%;
+  height: auto;
+}
+.card figure figcaption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 2px;
+  background: white;
+  padding: 0 8px;
+  color: var(--dark-grey);
+  font-size: 0.75em;
+}
+.card .exp-rating {
+  color: var(--light-grey);
+}
+.card .exp-rating .exp-rating--grade {
+  color: black;
+}
+.card .exp-rating .exp-rating--grade::before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  margin-right: 4px;
+  background: url('assets/iconStar.svg') center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.card .exp-rating .exp-rating--location::before {
+  content: ' \2022 ';
+  margin-right: 3px;
+}
+.card .exp-desc {
+  line-height: 1.2em;
+  font-weight: 300;
 }
